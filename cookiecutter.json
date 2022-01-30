@@ -1,0 +1,11 @@
+{
+    "project_slug": "my_project",
+    "author": "Name Surname <name.surname@example.com>",
+    "license": ["MIT", "BSD", "GPL3", "ISC", "Proprietary"],
+    "github_username": "Pseudonym",
+    "project_name": "my project",
+    "docker_registry_url": "docker.io",
+    "version": "1.0.0",
+    "project_description": "My project description.",
+    "use_docker": "y"
+}
