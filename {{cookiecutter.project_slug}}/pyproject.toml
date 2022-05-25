@@ -13,6 +13,9 @@ description = "{{cookiecutter.project_description}}"
 authors = ["{{cookiecutter.author}}"]
 license = "{{cookiecutter.license}}"
 classifiers = [
+{%- if cookiecutter.license in license_classifiers %}
+    '{{ license_classifiers[cookiecutter.license] }}',
+{%- endif %}
     'Programming Language :: Python :: 3.7',
     'Programming Language :: Python :: 3.8',
     'Programming Language :: Python :: 3.9',
