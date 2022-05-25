@@ -33,5 +33,4 @@ os.symlink(
     os.path.join(PROJECT_DIRECTORY, '.git/hooks/commit-msg')
 )
 
-subprocess.call(['git', 'add', '.'])
-subprocess.call(['git', 'commit', '-m', '[feat] Initial commit'])
+

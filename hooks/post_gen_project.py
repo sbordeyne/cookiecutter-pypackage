@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import os
+import subprocess
 
 PROJECT_DIRECTORY = os.path.realpath(os.path.curdir)
 
@@ -17,3 +18,6 @@ if __name__ == '__main__':
         remove_file('Dockerfile')
         remove_file('scripts/build_docker.py')
         remove_file('scripts/push_docker.py')
+
+subprocess.call(['git', 'add', '.'])
+subprocess.call(['git', 'commit', '-m', '[feat] Initial commit'])
