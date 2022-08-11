@@ -10,14 +10,13 @@ def remove_file(filepath):
 
 
 if __name__ == '__main__':
-    if 'Proprietary' == '{{ cookiecutter.licence }}':
+    if 'Proprietary' == '{{ cookiecutter.license }}':
         remove_file('LICENSE')
 
     if '{{ cookiecutter.use_docker | lower}}' != 'y':
         remove_file('docker-compose.yml')
         remove_file('Dockerfile')
-        remove_file('scripts/build_docker.py')
-        remove_file('scripts/push_docker.py')
+        remove_file('scripts/docker.py')
 
 subprocess.call(['git', 'add', '.'])
 subprocess.call(['git', 'commit', '-m', '[feat] Initial commit'])

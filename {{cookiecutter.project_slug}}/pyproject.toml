@@ -98,6 +98,8 @@ cmd = "poetry publish --build"
 fix = "Bugfixes"
 feat = "New features"
 san = "Refactorings"
+add = "New features"
+mod = "Modifications"
 
 {%- if cookiecutter.use_docker %}
 [tool.docker.build]
