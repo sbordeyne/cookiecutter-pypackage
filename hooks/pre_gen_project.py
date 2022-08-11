@@ -23,12 +23,3 @@ subprocess.call(
         'git@github.com:{{cookiecutter.github_username}}/{{cookiecutter.project_slug}}.git'
     ]
 )
-
-os.symlink(
-    os.path.join(PROJECT_DIRECTORY, 'git_hooks/pre-commit'),
-    os.path.join(PROJECT_DIRECTORY, '.git/hooks/pre-commit')
-)
-os.symlink(
-    os.path.join(PROJECT_DIRECTORY, 'git_hooks/commit-msg'),
-    os.path.join(PROJECT_DIRECTORY, '.git/hooks/commit-msg')
-)
