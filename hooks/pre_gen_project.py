@@ -32,5 +32,3 @@ os.symlink(
     os.path.join(PROJECT_DIRECTORY, 'git_hooks/commit-msg'),
     os.path.join(PROJECT_DIRECTORY, '.git/hooks/commit-msg')
 )
-
-
