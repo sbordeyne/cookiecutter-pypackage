@@ -27,6 +27,8 @@ python = "^3.10"
 
 [tool.poe.tasks]
 add_changelog  = { script = "scripts.add_changelog:main" }
+docker_build = { script = "scripts.docker:build" }
+docker_push = { script = "scripts.docker:push" }
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"
@@ -96,3 +98,10 @@ cmd = "poetry publish --build"
 fix = "Bugfixes"
 feat = "New features"
 san = "Refactorings"
+
+{%- if cookiecutter.use_docker %}
+[tool.docker.build]
+architectures = ["amd64"]
+use_latest = true
+registry = "{{cookiecutter.docker_registry}}"
+{%- endif %}
